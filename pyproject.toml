@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "app"
+version = "0.0.1"
+description = ""
+authors = ["nemesischill"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+torch = "2.1.0"
+loguru = "*"
+transformers = "4.42.4"
+accelerate = "*"
+dynaconf = "*"
+safetensors = "*"
+cryptography = "*"
+omegaconf = "*"
+gradio = "*"
+diffusers = "*"
+sentencepiece = "*"
+xformers = "*"
+invisible_watermark = "*"
+protobuf = "*"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-cov = "*"
+tinyaes = "*"
+pecan = "*"
+httpx = "*"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = 'warning'
+minversion = "6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
